@@ -48,5 +48,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-#CMD python app.py -P mpyc0:8000 -P mpyc1:8000 -I$PARTYINDEX
-CMD python app.py -P mpyc0:8000 -P mpyc1:8000 -I$PARTYINDEX
+CMD bash app.sh
