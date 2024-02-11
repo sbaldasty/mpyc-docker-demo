@@ -1,5 +1,11 @@
 NPARTIES=$1
 
+rm -r .config
+mkdir .config
+cd .config
+python ../generate-certificates.py -m $NPARTIES
+cd ..
+
 docker build --tag mpyc-demo .
 docker network create --driver bridge mpyc-demo-net
 
